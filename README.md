@@ -9,16 +9,16 @@
 ## Install
 
 ```bash
-# This repo
-git clone git@github.com:zchee/docker-machine-hypercore.git 
-# Intalll binary from /usr/local/bin/docker-machine-hypercore
-make install
 # @nathanleclaire developpnig libmachine-rpc
-git clone git@github.com:nathanleclaire/machine.git
+go get github.com/nathanleclaire/machine
 # Checkout branch
-cd machine && git checkout nathanleclaire/libmachine_rpc_plugins
+git checkout nathanleclaire/libmachine_rpc_plugins
 # Make libmachine rpc include docker-machine_darwin-amd64 binary
 cd script/build
+# go get this repo
+go get -d github.com/zchee/docker-machine-hypercore
+# Intalll binary from /usr/local/bin/docker-machine-hypercore
+make install
 # Install hypercore(linux)
 npm install linux -g
 # Exec docker-machine-hypercore driver server

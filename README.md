@@ -9,7 +9,7 @@
 ## Install
 
 ```bash
-# @nathanleclaire developpnig libmachine-rpc
+# @nathanleclaire developpnig libmachine-rpc branch
 go get github.com/nathanleclaire/machine
 # Checkout branch
 git checkout nathanleclaire/libmachine_rpc_plugins
@@ -21,9 +21,9 @@ go get -d github.com/zchee/docker-machine-hypercore
 make install
 # Install hypercore(linux)
 npm install linux -g
-# Exec docker-machine-hypercore driver server
+# Check docker-machine-hypercore driver server
 docker-machine-hypercore
-# Create hypercore(linux) vm use xhyve
+# Create hypercore(linux) vm use xhyve. driver server is auto execute in main docker-machine binary.
 ./docker-machine_darwin-amd64 create --driver hypercore hypercore
 
 # ! Stop ! Now, It's finished commit code until here.
